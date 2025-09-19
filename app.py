@@ -1,6 +1,5 @@
 import streamlit as st
 import requests
-from dotenv import load_dotenv
 import os
 
 load_dotenv()  # Loads .env file variable
@@ -47,3 +46,4 @@ if st.button("Run Flow"):
             else:
                 st.success("Flow output:")
                 st.json(result)
+
