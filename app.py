@@ -1,9 +1,12 @@
 import streamlit as st
 import requests
+from dotenv import load_dotenv
 import os
 
+load_dotenv()  # Loads .env file variable
+
 # Get Langflow API Key from environment variable
-API_KEY = "sk-LxGC_1gQxpsV-h2zZkI7XwH9VQxAx6Nc9Tk_zDXtQWc"
+API_KEY = os.getenv('LANGFLOW_API_KEY')
 if not API_KEY:
     st.error("Error: LANGFLOW_API_KEY environment variable is not set.")
     st.stop()
