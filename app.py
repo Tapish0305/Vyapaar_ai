@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 import os
 
-load_dotenv()  # Loads .env file variable
 
 # Get Langflow API Key from environment variable
 API_KEY = os.getenv('LANGFLOW_API_KEY')
@@ -46,4 +45,5 @@ if st.button("Run Flow"):
             else:
                 st.success("Flow output:")
                 st.json(result)
+
 
